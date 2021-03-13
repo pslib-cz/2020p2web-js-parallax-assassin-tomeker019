@@ -9,7 +9,7 @@
 </head>
 <body>
     <section class="parallax-container">
-        <div class="parallax-layer layer-background"></div>
+        <div class="parallax-layer layer-background" ></div>
         <div class="parallax-layer layer-1"></div>
         <div class="parallax-layer layer-2"></div>
         <div class="parallax-layer layer-3 layer-man"></div>
@@ -25,5 +25,27 @@
         <p>Lorem ipsum</p>
         <p>Creating parallax effect</p>
     </section>
-</body>
+
+
+
+    <script>
+        let layer1 = document.getElementsByClassName("layer-1")[0];
+        let layer2 = document.getElementsByClassName("layer-2")[0];
+        let layer3 = document.getElementsByClassName("layer-3")[0];
+        let layer4 = document.getElementsByClassName("layer-4")[0];
+
+        window.onscroll = () => {
+            var scrolled = pageYOffset;
+            layer1.style.top = -(scrolled * 0.3) + "px";
+            layer2.style.top = -(scrolled * 0.3) + "px";
+            layer3.style.top = -scrolled + "px";
+            layer3.style.left = -(scrolled * 0.4) + "px";
+
+            layer4.style.top = -scrolled + "px";
+            
+        }
+
+    </script>
+
+    </body>
 </html>
